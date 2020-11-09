@@ -1,16 +1,7 @@
-// Commonly used values
 const access_token = "3714727448640869";
 const api_url = "https://www.superheroapi.com/api.php/"+access_token+"/";
 const favFalse = '../assets/images/white_star.png';
 const favTrue = '../assets/images/red_star.png';
-
-driver();
-
-async function driver(){
-    const id = extractId();
-    const data = await getInfo(id);
-    renderPage(data);
-}
 
 document.addEventListener('click', (event) => {
     if(event.target.id == 'add-to-fav-btn'){
@@ -106,6 +97,13 @@ function makePresentable(jsonData){
     return str;
 }
 
+driver();
+
+async function driver(){
+    const id = extractId();
+    const data = await getInfo(id);
+    renderPage(data);
+}
 
 function customAlert(type, message){
     var element = document.getElementsByClassName(type);

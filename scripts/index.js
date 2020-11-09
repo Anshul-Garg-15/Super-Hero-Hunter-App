@@ -1,14 +1,8 @@
-// Commonly used values
 const access_token = '3714727448640869';
 const url = 'https://superheroapi.com/api.php/'+access_token+'/search/';
 const favFalse = '../assets/images/white_star.png';
 const favTrue = '../assets/images/red_star.png';
 
-
-// create object for this app in localStorage if not present
-checkLocalStorage();
-
-// main search event
 const searchBar = document.getElementById('search-data');
 searchBar.addEventListener('keyup', (e)=> {
     const searchString = e.target.value;
@@ -21,11 +15,6 @@ searchBar.addEventListener('keyup', (e)=> {
     }
 });
 
-function checkLocalStorage(){
-    if (localStorage.getItem('superheroFavs')==null){
-        localStorage.setItem('superheroFavs', JSON.stringify(Array()));
-    }
-}
 
 document.addEventListener('click', (event) => {
     if(event.target.id == 'details_btn'){
@@ -104,6 +93,15 @@ function getCard(data){
     `
     return cardContainer;
 }
+
+checkLocalStorage();
+
+function checkLocalStorage(){
+    if (localStorage.getItem('superheroFavs')==null){
+        localStorage.setItem('superheroFavs', JSON.stringify(Array()));
+    }
+}
+
 
 
 function customAlert(type, message){

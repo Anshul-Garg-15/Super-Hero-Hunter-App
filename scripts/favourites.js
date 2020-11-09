@@ -1,24 +1,7 @@
-// Commonly used values
 const access_token = '3714727448640869';
 const api_url = "https://www.superheroapi.com/api.php/"+access_token+"/";
 const favFalse = '../assets/images/white_star.png';
 const favTrue = '../assets/images/red_star.png';
-
-
-driver();
-
-function driver(){
-    var favs = JSON.parse(localStorage.getItem('superheroFavs'));
-    if(favs.length==0){
-        document.getElementById('search-results').innerHTML = "Please add your favourite heroes";
-        return;
-    }
-    document.getElementById('search-results').innerHTML = '';
-    favs.forEach((id) => {
-        searchHero(id);
-    });
-}
-
 
 document.addEventListener('click', (event) => {
     if(event.target.id == 'details_btn'){
@@ -111,6 +94,20 @@ function renderCard(data){
     document.getElementById('search-results').appendChild(cardContainer);
 }
 
+
+driver();
+
+function driver(){
+    var favs = JSON.parse(localStorage.getItem('superheroFavs'));
+    if(favs.length==0){
+        document.getElementById('search-results').innerHTML = "Please add your favourite heroes";
+        return;
+    }
+    document.getElementById('search-results').innerHTML = '';
+    favs.forEach((id) => {
+        searchHero(id);
+    });
+}
 
 function customAlert(type, message){
     var element = document.getElementsByClassName(type);
