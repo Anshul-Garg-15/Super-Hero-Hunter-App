@@ -1,0 +1,99 @@
+<html>    
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../styles/details.css">
+        <title>Details Page</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo-container align"><a href='index.html'>Super-Hero-Hunter-App</a></div>
+            <div class="favourite-container align">
+                <button><a href="favourites.html">FAVOURITES</a></button>
+            </div>
+        </header>
+        <div id="summary-container">
+            <div id="navigation-bar">
+                <div><a href="#powerstats">Powerstats</a></div>
+                <div><a href="#biography-target">Biography</a></div>
+                <div><a href="#appearance-target">Appearance</a></div> 
+                <div><a href="#occupation-target">Occupation</a></div>
+                <div><a href="#connections-target">Connections</a></div>
+            </div>
+
+            <div id='info-container'>
+                <div id="image-container">
+                    <img width="400" height="400">
+                    <img id="add-to-fav-btn" width="50">
+                </div>
+
+                <div id="summary-container">
+                    <div class="summary-item">
+                        <span class="anchor" id="powerstats"></span>
+                        <h1 id="powerstats">Powerstats</h1>
+                        <div id="hero-stats">
+                            <div id="hero-stat-names">
+                                <span>Combat</span>
+                                <span>Durability</span>
+                                <span>Intelligence</span>
+                                <span>Power</span>
+                                <span>Speed</span>
+                                <span>Strength</span>
+                            </div>
+
+                            <div id="hero-stat-bars">
+                                <div class="hero-stats-bar-container">
+                                    <div class="bar combat" style="width: 0%;">.</div>
+                                </div>
+                                <div class="hero-stats-bar-container">
+                                    <div class="bar durability" style="width: 0%;">.</div>
+                                </div>
+                                <div class="hero-stats-bar-container">
+                                    <div class="bar intelligence" style="width: 0%;">.</div>
+                                </div>
+                                <div class="hero-stats-bar-container">
+                                    <div class="bar power" style="width: 0%;">.</div>
+                                </div>
+                                <div class="hero-stats-bar-container">
+                                    <div class="bar speed" style="width: 0%;">.</div>
+                                </div>
+                                <div class="hero-stats-bar-container">
+                                    <div class="bar strength" style="width: 0%;">.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="summary-item">
+                        <span class="anchor" id="biography-target"></span>
+                        <h1>Biography</h1>
+                        <section id="biography">...</section>
+                    </div>
+                    <div class="summary-item">
+                        <span class="anchor" id="appearance-target"></span>
+                        <h1>Appearance</h1>
+                        <section id="appearance">...</section>
+                    </div>
+                   
+                    <div class="summary-item">
+                        <span class="anchor" id="occupation-target"></span>
+                        <h1>Occupation</h1>
+                        <section id="occupation">...</section>
+                    </div>
+                    <div class="summary-item">
+                        <span class="anchor" id="connections-target"></span>
+                        <h1>Connections</h1>
+                        <section id="connections">...</section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="alert" class="success">Success Message</div>
+        <div id="alert" class="failure">Error Message</div>
+
+        <script type="text/javascript" src="../scripts/details.js"></script>
+    </body>
+
+</html>
